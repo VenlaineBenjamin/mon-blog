@@ -16,18 +16,46 @@
 
 header {
     grid-area: header;
-    background: var(--primary);
-    padding: 20px;
+    background: var(--dark);
+    padding: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        color: var(--text-light);
+    }
+    .header-brand {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    ul {
+        display: flex;
+        li {
+            .header-nav {
+                font-size: 1.8rem;
+                padding: 0 10px;
+            }
+            .active {
+                font-weight: 700;
+                text-decoration: underline;
+                text-decoration-style: dotted;
+            }
+        }
+    }
 }
 
 .content {
     grid-area: content;
-    background: var(--dark);
+    background-color: var(--primary);
     padding: 20px;
 }
 
 footer {
     grid-area: footer;
-    background: var(--accent);
-    padding: 20px;
+    background: var(--dark-gray);
+    padding: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--text-light);
 }
