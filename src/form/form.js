@@ -1,2 +1,2 @@
 import "../assets/styles/styles.scss";
-import "../index.scss";
+import "./form.scss";
