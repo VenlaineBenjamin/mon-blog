@@ -1,4 +1,7 @@
+@use "./assets/styles/media-queries" as *;
+
 .content {
+    background: var(--divider);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,6 +12,9 @@
         .article {
             background: white;
             padding: 0 5rem;
+            @include xs {
+                padding: 0 2rem;
+            }
             border-radius: 0.3rem;
             display: flex;
             margin-bottom: 5rem;
@@ -20,14 +26,13 @@
                 width: 6rem;
                 border-radius: 50%;
                 margin-top: -3rem;
-                border: 0.3rem solid var(--primary);
             }
             h2 {
                 margin-top: 2rem;
                 margin-bottom: 0;
             }
             .article-author {
-                color: var(--dark-gray);
+                color: var(--hint);
                 margin-bottom: 3rem;
             }
             .article-content {

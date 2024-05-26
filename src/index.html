@@ -9,26 +9,32 @@
             href="https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap"
             rel="stylesheet"
         />
-        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-        <script type="module" src="index.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <div class="container">
             <header>
                 <a class="header-brand" href="/">Blog</a>
-                <ul>
-                    <li>
-                        <a href="../index.html" class="header-nav active">Acceuil</a>
+                <div class="header-menu">
+                    <ul>
                         <li>
-                            <a href="form/form.html" class="header-nav">Créer un article</a>
+                            <a href="../index.html" class="header-nav active">Acceuil</a>
+                            <li>
+                                <a href="form/form.html"    class="header-nav">Créer un article</a>
+                            </li>
                         </li>
-                    </li>
-                </ul>
+                    </ul>
+                    <div class="header-menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>   
             </header>
             <div class="content">
                 <div class="articles-container"></div>
             </div>
             <footer>© blog de Benjamin Verlaine</footer>
         </div>
+        <script type="module" src="./assets/javascripts/topbar.js"></script>
+        <script type="module" src="index.js"></script>
     </body>
 </html>

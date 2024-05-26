@@ -1,7 +1,3 @@
-import "./assets/javascripts/lucide.js";
-import "./assets/styles/styles.scss";
-import "./index.scss";
-
 import "./assets/styles/styles.scss";
 import "./index.scss";
 
@@ -13,22 +9,41 @@ const createArticles = (articles) => {
         articleDOM.classList.add("article");
         articleDOM.innerHTML = `
 <img
-  src="${article.img}"
-  alt="profile"
+    src="${article.img}"
+    alt="profile"
 />
 <h2>${article.title}</h2>
 <p class="article-author">${article.author} - ${article.category}</p>
 <p class="article-content">
-  ${article.content}
+    ${article.content}
 </p>
 <div class="article-actions">
-  <button class="btn btn-danger" data-id=${article._id} >Supprimer</button>
+    <button class="btn btn-danger" data-id=${article._id} >Supprimer</button>
 </div>
 `;
         return articleDOM;
     });
     articleContainerElement.innerHTML = "";
     articleContainerElement.append(...articlesDOM);
+    const deleteButtons = document.querySelectorAll(".btn-danger");
+    deleteButtons.forEach((button) => {
+        button.addEventListener("click", async (e) => {
+            const articleId = e.target.dataset.id;
+            try {
+                const response = await fetch(
+                    `https://restapi.fr/api/article/${articleId}`,
+                    {
+                        method: "DELETE",
+                    }
+                );
+                const body = await response.json();
+                console.log("body : ", body);
+                fetchArticle();
+            } catch (e) {
+                console.log("e : ", e);
+            }
+        }); // Add closing parenthesis here
+    });
 };
 
 const fetchArticle = async () => {
