@@ -16,8 +16,8 @@ importers:
         specifier: ^1.77.2
         version: 1.77.2
       vite:
-        specifier: ^5.2.11
-        version: 5.2.11(sass@1.77.2)
+        specifier: ^5.2.14
+        version: 5.2.14(sass@1.77.2)
 
 packages:
 
@@ -340,8 +340,8 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
-  vite@5.2.11:
-    resolution: {integrity: sha512-HndV31LWW05i1BLPMUCE1B9E9GFbOu1MbenhS58FuK6owSO5qHm7GiCotrNY1YE5rMeQSFBGmT5ZaLEjFizgiQ==}
+  vite@5.2.14:
+    resolution: {integrity: sha512-TFQLuwWLPms+NBNlh0D9LZQ+HXW471COABxw/9TEUBrjuHMo9BrYBPrN/SYAwIuVL+rLerycxiLT41t4f5MZpA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -617,7 +617,7 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  vite@5.2.11(sass@1.77.2):
+  vite@5.2.14(sass@1.77.2):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
